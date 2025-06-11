@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  logs: false;
+}
+
+
+:root {
+  --content-padding-x: 25px;
+  --content-padding-y: 10px;
+  --content-width: 960px;
+  --gap: 1rem;
+}
+
+html {
+  user-select: none;
+}
+
+div.view {
+  background-color: var(--color-base-300);
+}
+
+div.content {
+  background-color: var(--color-base-100);
+  margin: auto; /* Isn't centered otherwise */
+  padding: var(--content-padding-y) var(--content-padding-x);
+  max-width: var(--content-width);
+  border-radius: var(--radius-box);
+  min-height: 100vh;
+}
