@@ -23,11 +23,10 @@
   .close-btn {
     --offset: 10px;
 
+    z-index: 1;
     right: var(--offset);
     top: var(--offset);
-    
     position: absolute;
-
     transition: all 0.2s ease-out;
   }
   /* :global(.videobox:hover) .close-btn {
