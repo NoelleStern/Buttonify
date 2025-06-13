@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("@assets/fonts/Caveat-VariableFont_wght.woff") format("woff");
+  src: url("@assets/fonts/Caveat-VariableFont_wght.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Comic Sans";
+  src: url("@assets/fonts/ComicSans.woff") format("woff");
+  src: url("@assets/fonts/ComicSans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("@assets/fonts/RobotoCondensed-VariableFont_wght.woff") format("woff");
+  src: url("@assets/fonts/RobotoCondensed-VariableFont_wght.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("@assets/fonts/SpaceGrotesk-VariableFont_wght.woff") format("woff");
+  src: url("@assets/fonts/SpaceGrotesk-VariableFont_wght.woff2") format("woff2");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("@assets/fonts/VT323-Regular.woff") format("woff");
+  src: url("@assets/fonts/VT323-Regular.woff2") format("woff2");
+}

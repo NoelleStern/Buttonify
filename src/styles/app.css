@@ -3,27 +3,71 @@
   logs: false;
 }
 
+@import '@styles/fonts.css';
+
 
 :root {
-  --content-padding-x: 25px;
-  --content-padding-y: 10px;
+  --content-padding-x: 2.5rem;
+  --content-padding-y: 1rem;
   --content-width: 960px;
   --gap: 1rem;
 }
 
-html {
+
+/* Header styles */
+/* https://github.com/tailwindlabs/tailwindcss/issues/1460 */
+h1 { @apply text-4xl font-bold; }
+h2 { @apply text-3xl font-bold; }
+h3 { @apply text-2xl font-bold; }
+h4 { @apply text-xl font-semibold; }
+h5 { @apply text-lg font-semibold; }
+h6 { @apply text-sm font-semibold; }
+
+
+* {
   user-select: none;
 }
 
-div.view {
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#app {
+  height: 100%;
   background-color: var(--color-base-300);
 }
 
-div.content {
-  background-color: var(--color-base-100);
-  margin: auto; /* Isn't centered otherwise */
-  padding: var(--content-padding-y) var(--content-padding-x);
-  max-width: var(--content-width);
-  border-radius: var(--radius-box);
-  min-height: 100vh;
+.preview {
+  --multiplier: 1;
+  width: calc(88px * var(--multiplier));
+  height: calc(31px * var(--multiplier));
+  image-rendering: pixelated;
+}
+
+.preview-big {
+  --multiplier: 4;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Should be used alongside DaisyUI btn tag */
+.b8831 {
+  padding: 0;
+  border-radius: 0;
+  height: auto;
+  border: 0;
+  outline-offset: 1;
 }

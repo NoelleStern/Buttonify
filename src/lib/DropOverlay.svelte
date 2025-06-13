@@ -97,8 +97,6 @@
 
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=VT323&display=swap');
-
   @keyframes fontChange {
     0% {
       font-family: "Space Grotesk", serif;

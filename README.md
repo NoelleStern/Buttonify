@@ -1,6 +1,6 @@
 # Buttonify ⏻
 
-A simple FFMpeg-based web app to convert user videos to old school 88x31px buttons.
+A simple FFmpeg-based web app to convert user videos to old school 88x31px buttons.
 
 Test it out for yourself: https://noellestern.github.io/Buttonify
 

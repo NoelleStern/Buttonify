@@ -1,29 +1,31 @@
 <script lang="ts">
 
-  import DownloadButton from './DownloadButton.svelte';
+  import mime from 'mime';
 
-  interface Props { file: File };
-  let { file }: Props = $props();
+  interface Props { file: File|string, big?: boolean };
+  let { file, big=false }: Props = $props();
+
+  function getURLExtension(url: string): string {
+    return url.split('.').pop()!;
+  }
+  
+  function getType(input: File|string): string {
+    if (input instanceof File) { return input.type; }
+    return mime.getType(getURLExtension(input))!;
+  }
+
+  function toURL(input: File|string): string {
+    if (input instanceof File) { return URL.createObjectURL(input); }
+    return input;
+  }
 
 </script>
 
 
-<style>
-  .preview {
-    --multiplier: 4;
-    max-width: 80%;
-    width: calc(88px * var(--multiplier));
-    image-rendering: pixelated;
-  }
-</style>
-
-
-{#if file.type == "image/gif"}
-  <img src={URL.createObjectURL(file)} class="preview" alt="result" />
-{:else if file.type == "video/webm"}
-  <video class="preview" autoplay loop muted playsinline>
-    <source src={URL.createObjectURL(file)} type="video/webm">
+{#if getType(file).startsWith("image")}
+  <img src={toURL(file)} class="preview" class:preview-big={big} alt="result" />
+{:else if getType(file).startsWith("video")}
+  <video class="preview" class:preview-big={big} autoplay loop muted playsinline>
+    <source src={toURL(file)} type="video/webm">
   </video>
 {/if}
-
-<DownloadButton {file} />
