@@ -27,7 +27,6 @@ TODO: Equalizer for video sound?
 
 
   let finalResult: File|null = $state(null);
-  let scrollContainer: HTMLDivElement;
 
   const converterFSM = fsm('loading', {
     loading: {
@@ -117,10 +116,10 @@ TODO: Equalizer for video sound?
   <DropOverlay disabled={$converterFSM == "active" ||  $converterFSM == "loading"} />
 
   <!-- Main container -->
-  <div class="main-container no-scrollbar" bind:this={scrollContainer}>
+  <div class="main-container no-scrollbar">
 
     <!-- Header -->
-    <div class="w-full">
+    <div class="w-full overflow-clip">
       <Header />
     </div>
     
@@ -137,7 +136,6 @@ TODO: Equalizer for video sound?
         </div>
 
         <!-- Video box -->
-        <!-- <VideoBox {converterFSM} {removeVideo} /> -->
         <VideoBox {converterFSM} {removeVideo} />
 
         <!-- Additional -->

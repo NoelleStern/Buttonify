@@ -12,7 +12,7 @@
   let node: HTMLElement;
 
 
-  async function onDrop(event: DragEvent) {
+  async function onDrop(event: DragEvent): Promise<void> {
     if (disabled) { return; }
 
     // Happens sometimes. Just ignore it and don't create a toast
@@ -42,7 +42,7 @@
   // The same pattern appears if i change display from none to flex instead of changing the visibility. . .
   // Only filtering the events did the trick!
   onMount(() => {
-    function dragenter(value: boolean) {
+    function dragenter(value: boolean): void {
       // If value is different than the current one - do stuff
       if (ConverterStore.dragenter != value) {
         ConverterStore.dragenter = value;
@@ -52,7 +52,7 @@
         if (value) {
           node.style.animation = "0.35s ease-out 0s 1 normal forwards fadeIn";
         } else {
-          node.style.visibility = "visible"; // Needed since default visibility is set to "hidden"
+          node.style.visibility = "visible"; // Needed since the default visibility is set to "hidden"
           node.style.animation = "0.35s ease-out 0s 1 normal forwards fadeOut";
         }
       }
@@ -148,7 +148,7 @@
     opacity: 1;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.35);
     transition: opacity 0.5s ease-in-out;
     font-size: 100%;
   }
@@ -166,7 +166,6 @@
     animation-iteration-count: infinite;
     animation-direction: forwards;
   }
-  
 </style>
 
 

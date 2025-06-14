@@ -3,6 +3,7 @@
   import { fade } from 'svelte/transition';
   import { data as ConverterStore, defaultAspect } from './Stores/ConverterStore.svelte';
   import VideoPlayer from './VideoPlayer.svelte';
+  import IdleContent from './IdleContent.svelte';
 
   interface Props { converterFSM: any, removeVideo: Function };
   let { converterFSM, removeVideo }: Props = $props();
@@ -115,7 +116,9 @@
         {/if}
 
         {#if $converterFSM == "idle"}
-          <p in:fade class="pointer-events-none"> Drag your video here! </p>
+          <div in:fade class="flex flex-col items-center">
+            <IdleContent/>
+          </div>
         {/if}
 
         {#if $converterFSM == "ready" || $converterFSM == "active"}
