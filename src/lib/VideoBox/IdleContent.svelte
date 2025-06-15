@@ -1,6 +1,6 @@
 <script lang="ts">
 
-  import { data as ConverterStore } from './Stores/ConverterStore.svelte';
+  import { data as ConverterStore } from '../Stores/ConverterStore.svelte';
 
   let files: FileList|undefined = $state();
   

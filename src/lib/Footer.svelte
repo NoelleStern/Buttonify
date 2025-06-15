@@ -1,7 +1,7 @@
 <script lang="ts">
 
   import CatFuel from '@assets/media/catfuel.gif';
-  import Github from '@assets/media/github.88x31.png';
+  import GitHub from '@assets/media/github.88x31.png';
   import BadApple from '@assets/media/badapple.88x31.webm';
   import Lagrellis from '@assets/media/lagrelliswidethicc.gif';
   import RollingYrellis from '@assets/media/rollingyrellis.gif';
@@ -33,6 +33,6 @@
   {@render videoButton(BadApple, "https://www.youtube.com/watch?v=FtutLA63Cp8", "Bad Apple!!")}
   {@render button(Lagrellis, "https://www.youtube.com/watch?v=UnIhRpIT7nc", "Lagtrain")}
   {@render button(RollingYrellis, "https://www.youtube.com/watch?v=FK0q0ynIMcw", "Rolling Girl")}
-  {@render button(Github, "https://github.com/NoelleStern/Buttonify", "Project's Github Page")}
+  {@render button(GitHub, "https://github.com/NoelleStern/Buttonify", "Project's GitHub Page")}
 
 </div>

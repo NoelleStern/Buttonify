@@ -19,7 +19,7 @@ TODO: Equalizer for video sound?
 
   import DownloadButton from './lib/DownloadButton.svelte';
   import DropOverlay from './lib/DropOverlay.svelte';
-  import VideoBox from './lib/VideoBox.svelte';
+  import VideoBox from './lib/VideoBox/VideoBox.svelte';
   import Settings from './lib/Settings.svelte';
   import Preview from './lib/Preview.svelte';
   import Footer from './lib/Footer.svelte';

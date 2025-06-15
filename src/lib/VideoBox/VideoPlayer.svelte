@@ -1,7 +1,7 @@
 <script lang="ts">
 
-  import { data as ConverterStore } from './Stores/ConverterStore.svelte';
-  import Close from '../svg/close.svelte';
+  import { data as ConverterStore } from '../Stores/ConverterStore.svelte';
+  import Close from '../../svg/close.svelte';
 
   interface Props { onclick?: Function, buttonDisabled?: boolean };
   let { onclick = ()=>{}, buttonDisabled=false }: Props = $props();
