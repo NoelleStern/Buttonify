@@ -1,5 +1,4 @@
 <!--
-TODO: PWA
 TODO: Theming
 TODO: Confetti
 TODO: Info modal
